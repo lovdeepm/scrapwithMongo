@@ -1,0 +1,8 @@
+.jumbotron{
+	background-image: url('/assets/images/sportsballs1.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+} 
+body {
+    background-image: url('/assets/images/sports.png')
+}
