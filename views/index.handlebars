@@ -1,0 +1,37 @@
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Mongo Scraper</h1>
+    <p class="lead">Sports Edition.</p>
+  </div>
+</div>
+
+<div class="container">
+  {{#if articles}}
+    {{#each articles}}
+    
+
+    <div class="card" style="width: 60rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{this.title}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">
+          <a href={{this.link}} target="_blank">{{this.title}}</a>
+          <br>
+        </h6>
+        <p class="card-text">Summary: {{this.summary}}</p>
+      </div>
+      <div class="card-action deep-orange-text text-accent-3">
+      <br>
+           <button type="button" class="btn btn-outline-primary save" data-id={{this._id}}>Save Article</button>
+      </div>
+    </div>
+   
+    {{/each}}
+ {{else}}
+    <div class="card-panel blue-grey darken-3 white-text">
+      <h2>Nothing to see here!</h2>
+      <p>No Sports News, Scape some by clicking here! <a href="/scrape" class="deep-orange accent-2 blue-grey-text text-darken-3 waves-effect waves-light btn">scrape</a> some!</p>
+    {{/if}}
+    </div>
+</div>
+
