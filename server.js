@@ -2,7 +2,6 @@
 var express = require("express");
 var logger = require("morgan");
 var mongoose = require("mongoose");
-var bodyParser = require("body-parser")
 var exphbs = require("express-handlebars");
 var path = require("path");
 
@@ -158,7 +157,6 @@ app.get("/scrape", function(req, res) {
   });
 
   //route for saving an article
-  // Save an article
 app.post("/articles/save/:id", function(req, res) {
   // Use the article id to find and update its saved boolean
   db.Article.findOneAndUpdate({ "_id": req.params.id }, { "saved": true})
